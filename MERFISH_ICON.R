@@ -1,7 +1,11 @@
+# MERFISH Data analysis 
 
+library(dplyr)
+library(ggplot2)
+library(patchwork)
+library(Seurat)
 
-
-
+# Create Seurat object
 
 vizgen.input <- ReadVizgen(data.dir = "/path to data/", type = "centroids")
 ## remove the Blank-* control probes
