@@ -5,7 +5,7 @@ library(ggplot2)
 library(patchwork)
 library(Seurat)
 
-# Create Seurat object using background subtracted matrix
+# Create Seurat object
 Icon1<- LoadNanostring(data.dir = "/path to Cosmx data/",
                           fov="Icon1", assay = "Nanostring")
 
