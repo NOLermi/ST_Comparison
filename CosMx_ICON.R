@@ -18,6 +18,13 @@ Icon1<- subset(x=Icon1,subset = nCount_Nanostring > 30)
 Geomean <- exp(mean(log(Icon1$Area)))
 Icon1<-  subset(Icon1, subset = Area < 5*Geomean)
 
+# Check length(colnames(Icon1)) to find times value
+Slide_ID <- rep(c("Icon1"),times=length(colnames(Icon1)))
+names(Slide_ID) <- colnames(x = Icon1)
+
+# Add Slide_ID column to the metadata
+Icon1 <- AddMetaData(Icon1,Slide_ID, col.name = "slide_ID" )
+
 # Create Seurat object using background subtracted matrix
 Icon2<- LoadNanostring(data.dir = "/path to Cosmx data/",
                           fov="Icon2", assay = "Nanostring")
@@ -30,6 +37,13 @@ Icon2<- subset(x=Icon1,subset = nCount_Nanostring > 30)
 
 Geomean <- exp(mean(log(Icon2$Area)))
 Icon2<-  subset(Icon2, subset = Area < 5*Geomean)
+
+# Check length(colnames(Icon2)) to find times value
+Slide_ID <- rep(c("Icon2"),times=length(colnames(Icon2)))
+names(Slide_ID) <- colnames(x = Icon2)
+
+# Add Slide_ID column to the metadata
+Icon2 <- AddMetaData(Icon2,Slide_ID, col.name = "slide_ID" )
 
 # Merge datasets
 library(harmony)
