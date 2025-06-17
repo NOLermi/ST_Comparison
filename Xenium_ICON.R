@@ -5,7 +5,7 @@ library(ggplot2)
 library(patchwork)
 library(Seurat)
 
-# Create Seurat object using background subtracted matrix
+# Create Seurat object
 path <- "/path to data/"
 ICON<- LoadXenium(path, fov = "fov",assay = "Xenium")
 
