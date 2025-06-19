@@ -1,6 +1,6 @@
 # Comparison of imaging based single-cell resolution spatial transcriptomics profiling platforms using formalin-fixed paraffin-embedded tumor samples 
 
-Code repository for our paper. Raw data are in the GEO database. 
+Code repository for our paper. Raw data are in the GEO database. Source data of images are in supplementary data in the publication.
 
 The CosMx SMI, MERFISH and Xenium raw data generated in this study have been deposited in the Gene Expression Ominibus (GEO) database (https://www.ncbi.nlm.nih.gov/geo/) under accession code GSE299786, GSE299886 and GSE300007, respectively. 
 
